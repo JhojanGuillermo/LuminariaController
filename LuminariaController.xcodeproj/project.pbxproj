@@ -13,6 +13,8 @@
 		17CD5DB51F97F9EB0024EEE8 /* LuminariaController.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17CD5DB31F97F9EB0024EEE8 /* LuminariaController.xcdatamodeld */; };
 		17CD5DB71F97F9EB0024EEE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17CD5DB61F97F9EB0024EEE8 /* Assets.xcassets */; };
 		17CD5DBA1F97F9EB0024EEE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CD5DB81F97F9EB0024EEE8 /* LaunchScreen.storyboard */; };
+		17CD5DC21F97FB3B0024EEE8 /* ResponseFromDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CD5DC11F97FB3B0024EEE8 /* ResponseFromDevice.swift */; };
+		29D7A64A95DCFD9AF407BE8A /* Pods_LuminariaController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B2716B49D9FDA9CEC67BC1 /* Pods_LuminariaController.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		17CD5DB61F97F9EB0024EEE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17CD5DB91F97F9EB0024EEE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17CD5DBB1F97F9EB0024EEE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17CD5DC11F97FB3B0024EEE8 /* ResponseFromDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseFromDevice.swift; sourceTree = "<group>"; };
+		72B2716B49D9FDA9CEC67BC1 /* Pods_LuminariaController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuminariaController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEA0E423A070747C58FC94DF /* Pods-LuminariaController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuminariaController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LuminariaController/Pods-LuminariaController.debug.xcconfig"; sourceTree = "<group>"; };
+		B52AEC11D945D760D3A9EB2D /* Pods-LuminariaController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuminariaController.release.xcconfig"; path = "Pods/Target Support Files/Pods-LuminariaController/Pods-LuminariaController.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29D7A64A95DCFD9AF407BE8A /* Pods_LuminariaController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				17CD5DAB1F97F9EB0024EEE8 /* LuminariaController */,
 				17CD5DAA1F97F9EB0024EEE8 /* Products */,
+				DF84505600962D4A7A6F4DF9 /* Pods */,
+				490C468176E93075E43B2CC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +72,26 @@
 				17CD5DB81F97F9EB0024EEE8 /* LaunchScreen.storyboard */,
 				17CD5DBB1F97F9EB0024EEE8 /* Info.plist */,
 				17CD5DB31F97F9EB0024EEE8 /* LuminariaController.xcdatamodeld */,
+				17CD5DC11F97FB3B0024EEE8 /* ResponseFromDevice.swift */,
 			);
 			path = LuminariaController;
+			sourceTree = "<group>";
+		};
+		490C468176E93075E43B2CC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72B2716B49D9FDA9CEC67BC1 /* Pods_LuminariaController.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF84505600962D4A7A6F4DF9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AEA0E423A070747C58FC94DF /* Pods-LuminariaController.debug.xcconfig */,
+				B52AEC11D945D760D3A9EB2D /* Pods-LuminariaController.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17CD5DBE1F97F9EB0024EEE8 /* Build configuration list for PBXNativeTarget "LuminariaController" */;
 			buildPhases = (
+				E256CF39840716B701864D12 /* [CP] Check Pods Manifest.lock */,
 				17CD5DA51F97F9EB0024EEE8 /* Sources */,
 				17CD5DA61F97F9EB0024EEE8 /* Frameworks */,
 				17CD5DA71F97F9EB0024EEE8 /* Resources */,
+				773666B3BDE933CD4BD39865 /* [CP] Embed Pods Frameworks */,
+				725E50D556F00E158133F24C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,6 +164,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		725E50D556F00E158133F24C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LuminariaController/Pods-LuminariaController-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		773666B3BDE933CD4BD39865 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LuminariaController/Pods-LuminariaController-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LuminariaController/Pods-LuminariaController-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E256CF39840716B701864D12 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LuminariaController-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		17CD5DA51F97F9EB0024EEE8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -141,6 +225,7 @@
 			files = (
 				17CD5DB51F97F9EB0024EEE8 /* LuminariaController.xcdatamodeld in Sources */,
 				17CD5DAF1F97F9EB0024EEE8 /* ViewController.swift in Sources */,
+				17CD5DC21F97FB3B0024EEE8 /* ResponseFromDevice.swift in Sources */,
 				17CD5DAD1F97F9EB0024EEE8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +361,7 @@
 		};
 		17CD5DBF1F97F9EB0024EEE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEA0E423A070747C58FC94DF /* Pods-LuminariaController.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -285,12 +371,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tecsup.LuminariaController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		17CD5DC01F97F9EB0024EEE8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B52AEC11D945D760D3A9EB2D /* Pods-LuminariaController.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,7 +387,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tecsup.LuminariaController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
