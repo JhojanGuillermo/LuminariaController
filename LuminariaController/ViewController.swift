@@ -11,6 +11,16 @@ import Alamofire
 
 class ViewController: UIViewController,StreamDelegate,UIWebViewDelegate {
     
+    @IBOutlet weak var foco1: UIButton!
+    @IBOutlet weak var foco2: UIButton!
+    @IBOutlet weak var foco3: UIButton!
+    @IBOutlet weak var foco4: UIButton!
+    @IBOutlet weak var foco5: UIButton!
+    @IBOutlet weak var foco6: UIButton!
+    @IBOutlet weak var foco7: UIButton!
+    @IBOutlet weak var foco8: UIButton!
+    
+    
     let webView = UIWebView()
     
     var inputStream:  InputStream!
@@ -26,7 +36,7 @@ class ViewController: UIViewController,StreamDelegate,UIWebViewDelegate {
         var readStream:  Unmanaged<CFReadStream>?
         var writeStream: Unmanaged<CFWriteStream>?
         
-        CFStreamCreatePairWithSocketToHost(nil, "10.200.175.136" as CFString!, 80, &readStream, &writeStream)
+        CFStreamCreatePairWithSocketToHost(nil, "10.200.174.187" as CFString!, 3000, &readStream, &writeStream)
         
         self.inputStream = readStream!.takeRetainedValue()
         self.outputStream = writeStream!.takeRetainedValue()
@@ -39,7 +49,6 @@ class ViewController: UIViewController,StreamDelegate,UIWebViewDelegate {
         
         self.inputStream.open()
         self.outputStream.open()
-        
     }
     
     func outputStringToServer(_ str: String) {
@@ -48,40 +57,36 @@ class ViewController: UIViewController,StreamDelegate,UIWebViewDelegate {
         outputStream.write((data as NSData).bytes.bindMemory(to: UInt8.self, capacity: data.count), maxLength: data.count)
     }
     
-    @IBAction func tapped_2(_ sender: AnyObject) {
-        outputStringToServer("pin=2")
+    @IBAction func foc1(_ sender: Any) {
+        outputStringToServer("http://10.200.170.201/?pin=2")
     }
     
-    @IBAction func tapped_3(_ sender: AnyObject) {
-        outputStringToServer("pin=3")
+    @IBAction func foc2(_ sender: Any) {
+        outputStringToServer("http://10.200.170.201/?pin=3")
     }
     
-    @IBAction func tapped_4(_ sender: AnyObject) {
-        outputStringToServer("pin=4")
+    @IBAction func foc3(_ sender: Any) {
+        outputStringToServer("http://10.200.170.201/?pin=4")
     }
     
-    @IBAction func tapped_5(_ sender: AnyObject) {
-        outputStringToServer("pin=5")
+    @IBAction func foc4(_ sender: Any) {
+        outputStringToServer("http://10.200.170.201/?pin=5")
     }
     
-    @IBAction func tapped_6(_ sender: AnyObject) {
-        outputStringToServer("pin=6")
+    @IBAction func foc5(_ sender: Any) {
+        outputStringToServer("http://10.200.170.201/?pin=6")
     }
     
-    @IBAction func tapped_7(_ sender: AnyObject) {
-        outputStringToServer("pin=7")
+    @IBAction func foc6(_ sender: Any) {
+        outputStringToServer("http://10.200.170.201/?pin=7")
     }
     
-    @IBAction func tapped_8(_ sender: AnyObject) {
-        outputStringToServer("pin=8")
+    @IBAction func foc7(_ sender: Any) {
+        outputStringToServer("http://10.200.170.201/?pin=8")
     }
     
-    @IBAction func tapped_9(_ sender: AnyObject) {
-        outputStringToServer("pin=9")
+    @IBAction func foc8(_ sender: Any) {
+        outputStringToServer("http://10.200.170.201/?pin=9")
     }
     
-    //
 }
-
-
-
