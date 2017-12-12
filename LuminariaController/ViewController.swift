@@ -36,7 +36,7 @@ class ViewController: UIViewController,StreamDelegate,UIWebViewDelegate {
         var readStream:  Unmanaged<CFReadStream>?
         var writeStream: Unmanaged<CFWriteStream>?
         
-        CFStreamCreatePairWithSocketToHost(nil, "10.200.174.187" as CFString!, 3000, &readStream, &writeStream)
+        CFStreamCreatePairWithSocketToHost(nil, "192.168.11.201" as CFString!, 80, &readStream, &writeStream)
         
         self.inputStream = readStream!.takeRetainedValue()
         self.outputStream = writeStream!.takeRetainedValue()
@@ -58,35 +58,35 @@ class ViewController: UIViewController,StreamDelegate,UIWebViewDelegate {
     }
     
     @IBAction func foc1(_ sender: Any) {
-        outputStringToServer("http://10.200.170.201/?pin=2")
+        outputStringToServer("pin=2")
     }
     
     @IBAction func foc2(_ sender: Any) {
-        outputStringToServer("http://10.200.170.201/?pin=3")
+        outputStringToServer("pin=3")
     }
     
     @IBAction func foc3(_ sender: Any) {
-        outputStringToServer("http://10.200.170.201/?pin=4")
+        outputStringToServer("pin=4")
     }
     
     @IBAction func foc4(_ sender: Any) {
-        outputStringToServer("http://10.200.170.201/?pin=5")
+        outputStringToServer("pin=5")
     }
     
     @IBAction func foc5(_ sender: Any) {
-        outputStringToServer("http://10.200.170.201/?pin=6")
+        outputStringToServer("pin=6")
     }
     
     @IBAction func foc6(_ sender: Any) {
-        outputStringToServer("http://10.200.170.201/?pin=7")
+        outputStringToServer("pin=7")
     }
     
     @IBAction func foc7(_ sender: Any) {
-        outputStringToServer("http://10.200.170.201/?pin=8")
+        outputStringToServer("pin=8")
     }
     
     @IBAction func foc8(_ sender: Any) {
-        outputStringToServer("http://10.200.170.201/?pin=9")
+        outputStringToServer("pin=9")
     }
     
 }
