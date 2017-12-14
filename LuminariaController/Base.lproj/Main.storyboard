@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -87,11 +88,24 @@
                                     <action selector="foc5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="44r-fu-YU3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UsI-VV-ZXc">
+                                <rect key="frame" x="162.5" y="617" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="abs-Do-GoX"/>
+                                    <constraint firstAttribute="width" constant="50" id="aeI-en-iKo"/>
+                                </constraints>
+                                <state key="normal" image="microOff"/>
+                                <connections>
+                                    <action selector="micButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m1p-to-qeq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Ohh-OX-BZA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Qi-Oc-dGe"/>
+                            <constraint firstItem="UsI-VV-ZXc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nmb-pT-lWT"/>
+                            <constraint firstItem="UsI-VV-ZXc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cKX-Ik-2Wx"/>
                             <constraint firstItem="Ohh-OX-BZA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="i1U-DT-SVC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -109,6 +123,7 @@
                         <outlet property="foco6" destination="WLM-88-LuG" id="vFB-ip-FJW"/>
                         <outlet property="foco7" destination="1uB-dn-Vek" id="lLQ-qr-cHs"/>
                         <outlet property="foco8" destination="hLB-vb-dLZ" id="NBD-oE-egh"/>
+                        <outlet property="micButton" destination="UsI-VV-ZXc" id="kS0-pt-X53"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -158,5 +173,6 @@
     </scenes>
     <resources>
         <image name="focoApagado" width="500" height="500"/>
+        <image name="microOff" width="128" height="128"/>
     </resources>
 </document>
