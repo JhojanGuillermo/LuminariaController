@@ -29,6 +29,7 @@ class ViewController: UIViewController,StreamDelegate,UIWebViewDelegate {
     var comandos: [String] = ["prender", "apagar"]
     var idFocos: [String] = ["uno","dos","tres","cuatro","cinco","seis","siete","ocho"]
     var microfonoEncendido = false
+    var acciones: String = ""
     
     let webView = UIWebView()
     
@@ -143,16 +144,18 @@ class ViewController: UIViewController,StreamDelegate,UIWebViewDelegate {
         var nFoco = idFocos.index(of: idFoco)!
         nFoco = nFoco+2
         //outputStringToServer("pin=\(nFoco)")
-        let alertaVC = UIAlertController(title: "Exito!", message: "Ya lo prendí :)", preferredStyle: .alert)
-        let okAccion = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertaVC.addAction(okAccion)
-        self.present(alertaVC, animated: true, completion: nil)
-        //Alamofire.request("http://192.168.11.15/?pin=\(nFoco)").responseJSON{ response in
-          //  print("Result : \(response.result)")
-            //if let json = response.result.value {
-            //  print("JSON: \(json)")
-            //}
-        //}
+        
+            let alertaVC = UIAlertController(title: "Exito!", message: "", preferredStyle: .alert)
+            let okAccion = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertaVC.addAction(okAccion)
+            self.present(alertaVC, animated: true, completion: nil)
+        
+        Alamofire.request("http://192.168.11.201/?pin=\(nFoco)").responseJSON{ response in
+            print("Result : \(response.result)")
+            if let json = response.result.value {
+              print("JSON: \(json)")
+            }
+        }
     }
     
     @IBAction func foc1(_ sender: Any) {
